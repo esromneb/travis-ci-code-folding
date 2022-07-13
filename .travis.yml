@@ -1,0 +1,20 @@
+language: c
+
+services:
+  - docker
+
+before_install:
+  - docker
+
+script:
+  - echo -en 'travis_fold:start:unity_compile\\r'
+  - ls /
+  - echo -en 'travis_fold:end:unity_compile\\r'
+
+  - echo -en 'travis_fold:start:unity_test\\r'
+  - find /home
+  - echo -en 'travis_fold:end:unity_test\\r'
+
+  - echo -en 'travis_fold:start:unity_test_verbose\\r'
+  - find /
+  - echo -en 'travis_fold:end:unity_test_verbose\\r'
