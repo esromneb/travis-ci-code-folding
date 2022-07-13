@@ -12,9 +12,9 @@ script:
   - echo -en 'travis_fold:end:unity_compile\\r'
 
   - echo -en 'travis_fold:start:unity_test\\r'
-  - find /home
+  - find /home/travis/.gem
   - echo -en 'travis_fold:end:unity_test\\r'
 
   - echo -en 'travis_fold:start:unity_test_verbose\\r'
-  - find /
+  - find /home/travis/.rvm/log
   - echo -en 'travis_fold:end:unity_test_verbose\\r'
