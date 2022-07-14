@@ -7,17 +7,14 @@ services:
 before_install: true
 
 script:
-  - echo 'Testing...' && echo -en 'travis_fold:start:script.1\\r'
-  - echo "test"
-  # - ls /
-  - echo -en 'travis_fold:end:script.1\\r'
+  - echo 'Compiling...' && echo -en 'travis_fold:start:unity_compile\\r'
+  - ls /
+  - echo -en 'travis_fold:end:unity_compile\\r'
 
-  - echo -en 'travis_fold:start:script.2\\r'
-  - echo "test"
-  # - find /home/travis/.gem
-  - echo -en 'travis_fold:end:script.2\\r'
+  - echo 'Testing...' && echo -en 'travis_fold:start:unity_test\\r'
+  - find /home/travis/.gem
+  - echo -en 'travis_fold:end:unity_test\\r'
 
-  - echo -en 'travis_fold:start:custom.3\\r'
-  - echo "test"
-  # - find /home/travis/.rvm/log
-  - echo -en 'travis_fold:end:custom.3\\r'
+  - echo 'Test verbose...' && echo -en 'travis_fold:start:unity_test_verbose.3\\r'
+  #- find /home/travis/.rvm/log
+  - echo -en 'travis_fold:end:unity_test_verbose.3\\r'
