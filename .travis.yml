@@ -7,7 +7,7 @@ services:
 before_install: true
 
 script:
-  - echo -en 'travis_fold:start:script.1\\r'
+  - echo 'Testing...' && echo -en 'travis_fold:start:script.1\\r'
   - echo "test"
   # - ls /
   - echo -en 'travis_fold:end:script.1\\r'
