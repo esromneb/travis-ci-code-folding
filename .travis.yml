@@ -8,16 +8,16 @@ before_install: true
 
 script:
   - echo -en 'travis_fold:start:script.1\\r'
-  - echo "test
+  - echo "test"
   # - ls /
   - echo -en 'travis_fold:end:script.1\\r'
 
   - echo -en 'travis_fold:start:script.2\\r'
-  - echo "test
+  - echo "test"
   # - find /home/travis/.gem
   - echo -en 'travis_fold:end:script.2\\r'
 
-  - echo -en 'travis_fold:start:script.3\\r'
-  - echo "test
+  - echo -en 'travis_fold:start:custom.3\\r'
+  - echo "test"
   # - find /home/travis/.rvm/log
-  - echo -en 'travis_fold:end:script.3\\r'
+  - echo -en 'travis_fold:end:custom.3\\r'
