@@ -1,20 +1,20 @@
+---
 language: c
 
 services:
   - docker
 
-before_install:
-  - docker
+before_install: true
 
 script:
-  - echo -en 'travis_fold:start:unity_compile\\r'
+  - echo 'Compiling...' && echo -en 'travis_fold:start:unity_compile\\r'
   - ls /
   - echo -en 'travis_fold:end:unity_compile\\r'
 
-  - echo -en 'travis_fold:start:unity_test\\r'
+  - echo 'Testing...' && echo -en 'travis_fold:start:unity_test\\r'
   - find /home/travis/.gem
   - echo -en 'travis_fold:end:unity_test\\r'
 
-  - echo -en 'travis_fold:start:unity_test_verbose\\r'
-  - find /home/travis/.rvm/log
-  - echo -en 'travis_fold:end:unity_test_verbose\\r'
+  - echo 'Test verbose...' && echo -en 'travis_fold:start:unity_test_verbose.3\\r'
+  #- find /home/travis/.rvm/log
+  - echo -en 'travis_fold:end:unity_test_verbose.3\\r'
